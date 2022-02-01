@@ -1,0 +1,45 @@
+[
+    {
+      "precio": 500,
+      "id": 1,
+      "title": "Colombiano",
+      "url": "../img/juanvaldez.jfif",
+      "cantidad": 250
+    },
+    {
+      "precio": 300,
+      "id": 2,
+      "title": "Venezolano",
+      "url": "../img/famadeamerica.jfif",
+      "cantidad": 250
+    },
+    {
+      "precio": 80,
+      "id": 3,
+      "title": "argentino",
+      "url": "../img/argentina.jfif",
+      "cantidad": 250
+    },
+    {
+      "precio": 450,
+      "id": 4,
+      "title": "Brasilero",
+      "url": "../img/brasil.jfif",
+      "cantidad": 250
+    },
+    {
+      "precio": 610,
+      "id": 5,
+      "title": "ecuatoriano",
+      "url": "../img/ecuador.jfif",
+      "cantidad": 250
+    },
+    {
+      "precio": 350,
+      "id": 6,
+      "title": "peruano",
+      "url": "../img/peru.jfif",
+      "cantidad": 250
+    }
+   
+  ]
