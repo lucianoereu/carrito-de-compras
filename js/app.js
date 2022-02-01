@@ -39,8 +39,6 @@ const fetchData = async () => {
     console.log(error);
 }};
 /* dibujamos tarjetas */
-
-
 /* llamo data para dibujar tarjetas */
 const pintarProductos = (data) => {
         
@@ -54,26 +52,23 @@ const pintarProductos = (data) => {
             /* llamo cada elemento del recorrido */
             template.querySelector('img').setAttribute('src', producto.url);
             template.querySelector('h5').textContent = producto.title;
-           
             template.querySelector('p').textContent = producto.precio +'$';
             template.querySelector('button').dataset.id = producto.id;
-
-/* clono tarjetas */
+            
+            /* clono tarjetas */
             const clone = template.cloneNode(true);
-        fragmento.appendChild(clone);
-});
-/* duplico e imprimo tarjetas */
-/* agregando al dom */
+            fragmento.appendChild(clone);
+        });
+        /* duplico e imprimo tarjetas */
+        /* agregando al dom */
 contenedorProductos.appendChild(fragmento);
 
-    
 };
-
 
 /* detectar botnoes */
 const detectarBoton = (data) => {
     /* boton de las tarjetas */
-    const botones = document.querySelectorAll('.card button');
+    const botones = document.querySelectorAll('#bonton-agregar');
     /* console.log(botones); */
     botones.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -81,22 +76,23 @@ const detectarBoton = (data) => {
             // console.log("me diste click");
             //console.log(e.target.dataset.id);    
             const producto = data.find(item => item.id === parseInt(btn.dataset.id))
-            // console.log(producto); 
+            //console.log(producto); 
             producto.cantidad = 1;
             /* sumar al carrito */
             if (carrito.hasOwnProperty(producto.id)) {
-                   producto.cantidad = carrito[producto.id].cantidad + 1;
+                producto.cantidad = carrito[producto.id].cantidad + 1;
             }  
-                /* sprite operador */
-                carrito[producto.id]= {...producto}
-                // console.log(carrito);
-                /* llamo funcion */
-                productosCarrito();
+            /* sprite operador */
+            carrito[producto.id]= {...producto}
+            // console.log(carrito);
+            /* llamo funcion */
+            productosCarrito();
             
+        });
 });
-});}
 
-
+};
+/*  */
 
 /* funcion carrito */
 const productosCarrito = () => {
@@ -226,8 +222,23 @@ if (Object.keys(carrito).length === 0) {
     }
 });
 
+/* texto animado */
+
+const typed = new Typed('.typed', {
+    strings: ['<i class="animarTxt">Coequiper.</i>', '<i class="animarTxt">amigo.</i>', '<i class="animarTxt">compañero peculiar.</i>', '<i class="animarTxt">secuas.</i>'],
+    typeSpeed: 50,
+    startDaley: 1000,
+    backSpeed: 50,
+    loop: true,
+    shufle: true,
+    loopCount: false,
+    showCursor: false,
+    /* contentType: 'html', */
+});
 
 
+
+    
 
 
 
