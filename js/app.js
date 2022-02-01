@@ -29,7 +29,7 @@ if(localStorage.getItem('carrito')){
 /* recorro data json */
 const fetchData = async () => {
     try{
-    const response = await fetch('js/api.json');
+    const response = await fetch('api.json');
     const data = await response.json();
     /* tenemos data y pasamos a.... */
     pintarProductos(data);
