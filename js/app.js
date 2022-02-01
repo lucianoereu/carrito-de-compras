@@ -104,7 +104,7 @@ const productosCarrito = () => {
     const template = document.querySelector('#template-carrito').content;
     const fragmento = document.createDocumentFragment();
     Object.values(carrito).forEach(producto => {
-        template.querySelectorAll('th').textContent = producto.id;
+        
         template.querySelectorAll('td')[0].textContent = producto.title;
         template.querySelectorAll('td')[1].textContent = producto.cantidad;
         template.querySelector('span').textContent = producto.precio * producto.cantidad;
