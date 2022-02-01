@@ -2,43 +2,43 @@
     {
       "precio": 500,
       "id": 1,
-      "title": "Colombiano",
-      "url": "./img/juanvaldez.jfif",
+      "title": "Perrito",
+      "url": "https://image.freepik.com/vector-gratis/ilustracion-dibujos-animados-lindo-bulldog-funcionamiento-portatil-concepto-icono-tecnologia-animal_138676-1912.jpg",
       "cantidad": 250
     },
     {
-      "precio": 300,
+      "precio": 500,
       "id": 2,
-      "title": "Venezolano",
-      "url": "../img/famadeamerica.jfif",
+      "title": "Gaaaaturro",
+      "url": "https://image.freepik.com/vector-gratis/gato-lindo-que-trabaja-computadora-portatil-ilustracion-icono-vector-historieta-taza-cafe_138676-3473.jpg",
       "cantidad": 250
     },
     {
-      "precio": 80,
+      "precio": 800,
       "id": 3,
-      "title": "argentino",
-      "url": "../img/argentina.jfif",
+      "title": "panduski",
+      "url": "https://image.freepik.com/vector-gratis/panda-lindo-trabajando-ilustracion-icono-vector-dibujos-animados-portatil-concepto-icono-tecnologia-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3487.jpg",
       "cantidad": 250
     },
     {
       "precio": 450,
       "id": 4,
-      "title": "Brasilero",
-      "url": "../img/brasil.jfif",
+      "title": "Fatiga",
+      "url": "https://image.freepik.com/vector-gratis/lindo-perezoso-trabajando-ilustracion-icono-vector-dibujos-animados-portatil-concepto-icono-tecnologia-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3489.jpg",
       "cantidad": 250
     },
     {
-      "precio": 610,
+      "precio": 310,
       "id": 5,
-      "title": "ecuatoriano",
-      "url": "../img/ecuador.jfif",
+      "title": "muuuCow",
+      "url": "https://image.freepik.com/vector-gratis/vaca-linda-que-trabaja-ilustracion-icono-vector-historieta-ordenador-portatil-concepto-icono-tecnologia-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3915.jpg",
       "cantidad": 250
     },
     {
-      "precio": 350,
+      "precio": 750,
       "id": 6,
-      "title": "peruano",
-      "url": "../img/peru.jfif",
+      "title": "Polar",
+      "url": "https://image.freepik.com/vector-gratis/lindo-oso-polar-trabajando-ilustracion-icono-vector-dibujos-animados-portatil-concepto-icono-tecnologia-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3484.jpg",
       "cantidad": 250
     }
    
