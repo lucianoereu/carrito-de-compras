@@ -3,7 +3,7 @@
       "precio": 500,
       "id": 1,
       "title": "Colombiano",
-      "url": "../img/juanvaldez.jfif",
+      "url": "./img/juanvaldez.jfif",
       "cantidad": 250
     },
     {
