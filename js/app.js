@@ -248,7 +248,7 @@ const typed = new Typed('.typed', {
     /* contentType: 'html', */
 });
 
-$("body").prepend('<div id="miModal" class="modal fade slow overlay" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div style="width:500px text-color:white" class="form-group modal-content"><div class="container row text-center modal-dialog modal-dialog-centered modal-dialog-scrollable"><h1 class="text-secondary">Somos los Coworkers</h1><br><p>y te acompañaremos</p></div></div></div></div>');
+$("body").prepend('<div id="miModal" class="modal fade slow overlay" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div style="width:500px text-color:white" class="form-group modal-content"><div class="container row text-center modal-dialog modal-dialog-centered modal-dialog-scrollable"><h1 class="text-secondary">Somos los Coworkers</h1><br><p>y te acompañaremos</p><br> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum numquam incidunt, itaque, dolore porro fuga cum ea sequi enim suscipit amet illo, voluptatibus totam! Quos illo suscipit beatae adipisci error.</p></div></div></div></div>');
 
 
 /*  animaciones con jquery */
