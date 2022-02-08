@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    
+  
+   
 /* ***************constantes******************* */
 /* container producots */
 const contenedorProductos = document.querySelector('#contenedor-productos');
@@ -12,61 +16,69 @@ const btnComprar = document.getElementById("btn-compra");
 /* carrito de compras */
 let carrito = {};
 
-
 /* llamado DOM */
-document.addEventListener("DOMContentLoaded", () => {fetchData()
+document.addEventListener("DOMContentLoaded", () => {articulos 
 /* respaldo de carrito en localstorage */
 if(localStorage.getItem('carrito')){
     carrito = JSON.parse(localStorage.getItem('carrito'));
     productosCarrito();
 }  });
 
-
-/* fechData */
-
-
-
 /* recorro data json */
-const fetchData = async () => {
-    try{
-    const response = await fetch('js/api.json');
-    const data = await response.json();
-    /* tenemos data y pasamos a.... */
-    pintarProductos(data);
-    detectarBoton(data);
-    // console.log(data); 
-} catch (error) {
-    console.log(error);
-}};
+/* ajax */
+let  articulos = "";
+$.ajax({
+    url: "js/api.json",
+    dataType: "json",
+    success: (respuesta) => {
+        articulos = respuesta;
+        pintarProductos(articulos);
+        detectarBoton(articulos);
+    },
+});
+
+
+function data () {
+    console.log(carrito);
+}
+
+
 /* dibujamos tarjetas */
 /* llamo data para dibujar tarjetas */
-const pintarProductos = (data) => {
+const pintarProductos = (articulos) => {
         
         const fragmento = document.createDocumentFragment();
     /* console.log(template); */
      
     
     /* recorro json para dibujar elementos */
-    data.forEach(producto => {
+    articulos.forEach(producto => {
             // console.log(producto); 
             /* llamo cada elemento del recorrido */
             template.querySelector('img').setAttribute('src', producto.url);
             template.querySelector('h5').textContent = producto.title;
             template.querySelector('p').textContent = producto.precio +'$';
             template.querySelector('button').dataset.id = producto.id;
-            
+
             /* clono tarjetas */
             const clone = template.cloneNode(true);
             fragmento.appendChild(clone);
         });
+
         /* duplico e imprimo tarjetas */
         /* agregando al dom */
-contenedorProductos.appendChild(fragmento);
+        contenedorProductos.appendChild(fragmento);
 
-};
+        
+/*  animaciones con jquery */
+        
+        
+    };
+   
+       
 
-/* detectar botnoes */
-const detectarBoton = (data) => {
+    /* detectar botnoes */
+const detectarBoton = (articulos) => {
     /* boton de las tarjetas */
     const botones = document.querySelectorAll('#bonton-agregar');
     /* console.log(botones); */
@@ -75,7 +87,7 @@ const detectarBoton = (data) => {
             /* vista de botones */
             // console.log("me diste click");
             //console.log(e.target.dataset.id);    
-            const producto = data.find(item => item.id === parseInt(btn.dataset.id))
+            const producto = articulos.find(item => item.id === parseInt(btn.dataset.id))
             //console.log(producto); 
             producto.cantidad = 1;
             /* sumar al carrito */
@@ -236,9 +248,13 @@ const typed = new Typed('.typed', {
     /* contentType: 'html', */
 });
 
+$("body").prepend('<div id="miModal" class="modal fade slow overlay" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div style="width:500px text-color:white" class="form-group modal-content"><div class="container row text-center modal-dialog modal-dialog-centered modal-dialog-scrollable"><h1 class="text-secondary">Somos los Coworkers</h1><br><p>y te acompañaremos</p></div></div></div></div>');
 
 
-    
+/*  animaciones con jquery */
+        $ ('#logo').on('click', function(){ 
+            $('#miModal').modal('show', {backdrop: 'static', keyboard: false});
+        });
+        });
 
-
-
+            
