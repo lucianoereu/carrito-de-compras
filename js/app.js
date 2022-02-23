@@ -1,8 +1,4 @@
-$(document).ready(function(){
-    
-  
-   
-/* ***************constantes******************* */
+ /* ***************constantes******************* */
 /* container producots */
 const contenedorProductos = document.querySelector('#contenedor-productos');
 /* carrito */
@@ -255,6 +251,6 @@ $("body").prepend('<div id="miModal" class="modal fade slow overlay" role="dialo
         $ ('#logo').on('click', function(){ 
             $('#miModal').modal('show', {backdrop: 'static', keyboard: false});
         });
-        });
+        
 
             
